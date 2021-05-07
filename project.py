@@ -83,14 +83,22 @@ class Asylum_Seekers():
             temp_dem["Male 60plus"]=result.male_60plus
             temp_dem["Male unknown"]=result.m_unknown
             temp_dem["Male total"]=result.m_total
+            dem.append(temp_dem) 
         return(dem)
 
     def time_series_info(self): 
-        session = Session(self.engine)
-        results = session.query(self.TimeSeries)
-        df = pd.read_sql(results, session.connection())
-        session.close()  
-        return list(df)   
+        results = session.query(Timeseries.year, Timeseries.host_country, Timeseries.origin,Timeseries.population_type,Timeseries.value).\
+            all() 
+        time = []
+        for result in results:
+            temp_dict = {}
+            temp_dict["Year"]= result.year
+            temp_dict["Host Country"] = result.host_country
+            temp_dict["Origin"] = result.origin
+            temp_dict["Population Type"] = result.population_type
+            temp_dict["Value"] = result.value
+            time.append(temp_dict)
+        return(time)   
 
    
    
