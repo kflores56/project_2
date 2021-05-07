@@ -1,2 +1,6 @@
 database = "postgres"
-connect_string = "postgresql+psycopg2://pgadmin:pgadmin@server/database/project"
+connect_string = "postgresql+psycopg2://postgres:pgadmin@localhost/project"
+
+
+
+
