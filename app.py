@@ -1,12 +1,12 @@
 # dependencies
 from config import database, connect_string
 # relational database class with our data retrieval functions
-from project import AsylumSeekers 
+from project import Asylum_Seekers 
 from flask import Flask, jsonify, render_template
 #################################################
 # Database Setup
 #################################################   
-data = AsylumSeekers()
+data = Asylum_Seekers()
 #################################################
 # Flask Setup
 #################################################
@@ -17,8 +17,14 @@ app = Flask(__name__)
 #################################################
 @app.route("/")
 def home():
-    #users = data.get_subject_ids()
-    #return render_template("index.html", user_ids=users)
+    """List all available api routes."""
+    return (
+        f"<h4>Available Routes:</h4>"
+        f'<a href="/api/asylumseekers">Asylum Seekers</a><br/>'       
+        f'<a href="/api/demographics">Demographics</a><br/>' 
+        f'<a href="/api/timeseries">Time Series</a><br/>'  
+        f'<a href="/"><h4>Back</h4></a><br/>' 
+    )       
 
 @app.route("/api/asylumseekers")
 def asy():
