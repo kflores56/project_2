@@ -7,7 +7,7 @@
 
 function build_mfChart(sample) {
   
-  var dataUrl = "/Resources/demographics.csv";
+  var dataUrl = "/api/demographics";
 
   // var userInfo;
   d3.json(dataUrl).then((data) => {
@@ -39,7 +39,7 @@ function build_mfChart(sample) {
 // Age Breakdown Bar Chart
 // -----------------------------------
 
-    var 
+    // var 
 
 
 // -----------------------------------
@@ -49,7 +49,7 @@ function build_mfChart(sample) {
 // Create Function 
 function build_topChart(sample) {
 
-  var dataUrl = "/Resources/time_series.csv";
+  var dataUrl = "/api/timeseries";
 
   d3.json(dataUrl).then((data) => {
 
@@ -74,31 +74,30 @@ function build_topChart(sample) {
     };
 
     Plotly.newPlot("bar", barData, barLayout);
-  }
 
-}
 
-function init() {
-  // Grab a reference to the dropdown select element
-  var selector = d3.select("#selDataset");
+// // Dropdown function 
+// function init() {
+//   // Grab a reference to the dropdown select element
+//   var selector = d3.select("#selDataset");
 
-  // Use the list of sample names to populate the select options
-  d3.json("/api/v1.0/ids").then((data) => {
-    var sampleNames = data;
+//   // Use the list of sample names to populate the select options
+//   d3.json("/api/v1.0/ids").then((data) => {
+//     var sampleNames = data;
 
-    // Use the first sample from the list to build the initial plots
-    var firstSample = sampleNames[0];
-    var userData = buildCharts(firstSample);
+//     // Use the first sample from the list to build the initial plots
+//     var firstSample = sampleNames[0];
+//     var userData = buildCharts(firstSample);
 
-  });
-}
+//   });
+// }
 
-function optionChanged(newSample) {
-  // Fetch new data each time a new sample is selected
-  console.log(`change ${{newSample}}`)
-  buildCharts(newSample);
+// function optionChanged(newSample) {
+//   // Fetch new data each time a new sample is selected
+//   console.log(`change ${{newSample}}`)
+//   buildCharts(newSample);
 
-}
+// }
 
-// Initialize the dashboard
-init();
+// // Initialize the dashboard
+// init():
