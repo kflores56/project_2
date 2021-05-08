@@ -5,9 +5,10 @@
 
 // Create function
 
-function build_mfChart(sample) {
+function build_mfChart() {
   
-  var dataUrl = "/api/demographics";
+  // var dataUrl = "/api/demographics";
+  var dataUrl = "/Resources/demographics.csv"
 
   // var userInfo;
   d3.json(dataUrl).then((data) => {
@@ -33,47 +34,48 @@ function build_mfChart(sample) {
       margin: { t: 30, l: 150 }
     };
 
-    Plotly.newPlot("bar", barData, barLayout);
+    Plotly.newPlot("mf_bar", barData, barLayout);
+  }}
 
-// -----------------------------------
-// Age Breakdown Bar Chart
-// -----------------------------------
+// // -----------------------------------
+// // Age Breakdown Bar Chart
+// // -----------------------------------
 
-    // var 
+//     var 
 
 
-// -----------------------------------
-// Top 25 Chart Countries Bar Graph
-// -----------------------------------
+// // -----------------------------------
+// // Top 25 Chart Countries Bar Graph
+// // -----------------------------------
 
-// Create Function 
-function build_topChart(sample) {
+// // Create Function 
+// function build_topChart(sample) {
 
-  var dataUrl = "/api/timeseries";
+//   var dataUrl = "/api/timeseries";
 
-  d3.json(dataUrl).then((data) => {
+//   d3.json(dataUrl).then((data) => {
 
-    var top_year = data.map(info => info.year);
-    var host = data.map(info => info.host);
-    var value = data.map(info => info.value);
+//     var top_year = data.map(info => info.year);
+//     var host = data.map(info => info.host);
+//     var value = data.map(info => info.value);
 
-    // Build Bar Chart
-    var barData = [
-      {
-        y: top_year,
-        x: value.slice(0, 25).reverse(),
-        text: host.slice(0, 25).reverse(),
-        type: "bar",
-        // orientation: "h",
-      }
-    ];
+//     // Build Bar Chart
+//     var barData = [
+//       {
+//         y: top_year,
+//         x: value.slice(0, 25).reverse(),
+//         text: host.slice(0, 25).reverse(),
+//         type: "bar",
+//         // orientation: "h",
+//       }
+//     ];
 
-    var barLayout = {
-      title: "Top 25 Host Countries",
-      margin: { t: 30, l: 150 }
-    };
+//     var barLayout = {
+//       title: "Top 25 Host Countries",
+//       margin: { t: 30, l: 150 }
+//     };
 
-    Plotly.newPlot("bar", barData, barLayout);
+//     Plotly.newPlot("bar", barData, barLayout);
 
 
 // // Dropdown function 
