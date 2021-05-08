@@ -35,6 +35,7 @@ function build_mfChart() {
     };
 
     Plotly.newPlot("mf_bar", barData, barLayout);
+    
   }}
 
 // // -----------------------------------
