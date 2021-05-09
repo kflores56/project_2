@@ -1,7 +1,7 @@
 # dependencies
 from config import database, connect_string
 # relational database class with our data retrieval functions
-from project import Asylum_Seekers
+from projectcsv import Asylum_Seekers
 from flask import Flask, jsonify, render_template
 #################################################
 # Database Setup

@@ -46,7 +46,7 @@ class Asylum_Seekers():
         asy_seek = []
         for result in results:
             temp_dict = {}
-            temp_dict["Host Country"] = result.host_country
+            temp_dict["HostCountry"] = result.host_country
             temp_dict["Origin"] = result.origin
             temp_dict["Year"]= result.year
             temp_dict["Month"] = result.month
@@ -65,24 +65,24 @@ class Asylum_Seekers():
         for result in results:
             temp_dem = {}
             temp_dem["Year"]=result.year
-            temp_dem["Host Country"]=result.host_country
+            temp_dem["HostCountry"]=result.host_country
             temp_dem["Location"]=result.location_name
-            temp_dem["Female 0-4"]=result.female_0_4
-            temp_dem["Female 5-11"]=result.female_5_11
-            temp_dem["Female 5-17"]=result.female_5_17
-            temp_dem["Female 12-17"]=result.female_12_17
-            temp_dem["Female 18-59"]=result.female_18_59
-            temp_dem["Female 60+"]=result.female_60plus
-            temp_dem["Female unknown"]=result.f_unknown
-            temp_dem["Female total"]=result.f_total
-            temp_dem["Male 0-4"]=result.male_0_4
-            temp_dem["Male 5-11"]=result.male_5_11
-            temp_dem["Male 5-17"]=result.male_5_17
-            temp_dem["Male 12-17"]=result.male_12_17
-            temp_dem["Male 18-59"]=result.male_18_59
-            temp_dem["Male 60plus"]=result.male_60plus
-            temp_dem["Male unknown"]=result.m_unknown
-            temp_dem["Male total"]=result.m_total
+            temp_dem["Female_0-4"]=result.female_0_4
+            temp_dem["Female_5-11"]=result.female_5_11
+            temp_dem["Female_5-17"]=result.female_5_17
+            temp_dem["Female_12-17"]=result.female_12_17
+            temp_dem["Female_18-59"]=result.female_18_59
+            temp_dem["Female_60+"]=result.female_60plus
+            temp_dem["Female_unknown"]=result.f_unknown
+            temp_dem["Female_total"]=result.f_total
+            temp_dem["Male_0-4"]=result.male_0_4
+            temp_dem["Male_5-11"]=result.male_5_11
+            temp_dem["Male_5-17"]=result.male_5_17
+            temp_dem["Male_12-17"]=result.male_12_17
+            temp_dem["Male_18-59"]=result.male_18_59
+            temp_dem["Male_60plus"]=result.male_60plus
+            temp_dem["Male_unknown"]=result.m_unknown
+            temp_dem["Male_total"]=result.m_total
             dem.append(temp_dem) 
         return(dem)
 
@@ -93,9 +93,9 @@ class Asylum_Seekers():
         for result in results:
             temp_dict = {}
             temp_dict["Year"]= result.year
-            temp_dict["Host Country"] = result.host_country
+            temp_dict["Host_Country"] = result.host_country
             temp_dict["Origin"] = result.origin
-            temp_dict["Population Type"] = result.population_type
+            temp_dict["Population_Type"] = result.population_type
             temp_dict["Value"] = result.value
             time.append(temp_dict)
         return(time)   
