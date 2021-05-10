@@ -19,16 +19,15 @@ app = Flask(__name__)
 def home():
     """List all available api routes."""
     return (
-        f"<h4>Available Routes:</h4>"
-        f'<a href="/api/asylumseekers">Asylum Seekers</a><br/>'       
+        f"<h4>Available Routes:</h4>"       
         f'<a href="/api/demographics">Demographics</a><br/>' 
         f'<a href="/api/timeseries">Time Series</a><br/>'  
         f'<a href="/"><h4>Back</h4></a><br/>' 
     )       
 
-@app.route("/api/asylumseekers")
-def asy():
-    return jsonify(data.asy_seekers_info())
+# @app.route("/api/asylumseekers")
+# def asy():
+#     return jsonify(data.asy_seekers_info())
 
 @app.route("/api/demographics")
 def demo():
