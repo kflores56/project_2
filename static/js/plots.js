@@ -2,43 +2,45 @@
 // -----------------------------------
 // Male v Female Bar Chart
 // -----------------------------------
+var dataUrl = "/api/demographics"
+d3.json(dataUrl).then((data) => {
+  console.log(data)
+})
 
-// Create function
-build_mfChart();
-
-function build_mfChart() {
+// // Create function
+// function build_mfChart() {
   
-  var dataUrl = "https://asylumseekersapp.herokuapp.com/api/demographics";
-  // var dataUrl = "/Resources/demographics.csv"
+//   var dataUrl = "/api/demographics";
+//   // var dataUrl = "/Resources/demographics.csv"
 
-  // var userInfo;
-  d3.json(dataUrl).then((data) => {
-    console.log(data)
-    var mf_year = data.map(info => info.Year);
-    var m_total = data.map(info => info.Male_total);
-    var f_total = data.map(info => info.Female_total);
-    var gender = [m_total, f_total];
+//   // var userInfo;
+//   d3.json(dataUrl).then((data) => {
+//     console.log(data)
+//     var mf_year = data.map(info => info.year);
+//     var m_total = data.map(info => info.m_total);
+//     var f_total = data.map(info => info.f_total);
+//     // var gender = [m_total, f_total];
 
-    // Build Bar Chart
-    var barData = [
-      {
-        y: mf_year,
-        x: gender,
-        text: "",
-        type: "bar",
-        orientation: "h",
-      }
-    ];
+//     // Build Bar Chart
+//     var barData = [
+//       {
+//         y: mf_year,
+//         x: m_total, f_total,
+//         text: "",
+//         type: "bar",
+//         orientation: "h",
+//       }
+//     ];
 
-    var barLayout = {
-      title: "Male vs Female",
-      margin: { t: 30, l: 150 }
-    };
+//     var barLayout = {
+//       title: "Male vs Female",
+//       margin: { t: 30, l: 150 }
+//     };
 
-    Plotly.newPlot("mf_bar", barData, barLayout);
+//     Plotly.newPlot("mf_bar", barData, barLayout);
     
-  }
-)}
+//   }
+// )}
 // // -----------------------------------
 // // Age Breakdown Bar Chart
 // // -----------------------------------
