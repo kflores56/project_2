@@ -10,6 +10,38 @@ d3.json(dataUrl).then((data) => {
 // // Create function
 // function build_mfChart() {
   
+  var dataUrl = "http://127.0.0.1:5000/api/demographics";
+  // d3.json(dataUrl).then(function(data){
+  //   console.log(data)
+  // })
+//   // var dataUrl = "/Resources/demographics.csv"
+
+//   // var userInfo;
+  d3.json(dataUrl).then((data) => {
+    console.log(data)
+    var mf_year = data.map(info => info.year);
+    var m_total = data.map(info => info.m_total);
+    var f_total = data.map(info => info.f_total);
+    // var gender = [m_total, f_total];
+
+    // Build Bar Chart
+    var barData = [
+      {
+        y: mf_year,
+        x: m_total,f_total,
+        //text: " ",
+        type: "bar",
+        orientation: "h",
+      }
+    ];
+
+    var barLayout = {
+      title: "Male vs Female",
+      margin: { t: 30, l: 150 }
+    };
+
+    Plotly.newPlot("mf_bar", barData, barLayout);
+
 //   var dataUrl = "/api/demographics";
 //   // var dataUrl = "/Resources/demographics.csv"
 
