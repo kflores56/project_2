@@ -5,17 +5,17 @@
 
 // Create function
 
-function build_mfChart() {
+function build_mfChart(sample) {
   
-  // var dataUrl = "/api/demographics";
-  var dataUrl = "/Resources/demographics.csv"
+  var dataUrl = `https://asylumseekersapp.herokuapp.com/api/demographics`;
+  // var dataUrl = "/Resources/demographics.csv"
 
   // var userInfo;
   d3.json(dataUrl).then((data) => {
-
-    var mf_year = data.map(info => info.year);
-    var m_total = data.map(info => info.m_total);
-    var f_total = data.map(info => info.f_total);
+    console.log(data)
+    var mf_year = data.map(info => info.Year);
+    var m_total = data.map(info => info.Male_total);
+    var f_total = data.map(info => info.Female_total);
     var gender = [m_total, f_total];
 
     // Build Bar Chart
@@ -23,7 +23,7 @@ function build_mfChart() {
       {
         y: mf_year,
         x: gender,
-        text: otu_labels.slice(0, 10).reverse(),
+        text: "",
         type: "bar",
         orientation: "h",
       }
@@ -36,8 +36,8 @@ function build_mfChart() {
 
     Plotly.newPlot("mf_bar", barData, barLayout);
     
-  }}
-
+  }
+)}
 // // -----------------------------------
 // // Age Breakdown Bar Chart
 // // -----------------------------------
@@ -104,3 +104,4 @@ function build_mfChart() {
 
 // // Initialize the dashboard
 // init():
+  
