@@ -41,6 +41,7 @@ d3.json(dataUrl).then((data) => {
     };
 
     Plotly.newPlot("mf_bar", barData, barLayout);
+  })
 
 //   var dataUrl = "/api/demographics";
 //   // var dataUrl = "/Resources/demographics.csv"
@@ -139,4 +140,3 @@ d3.json(dataUrl).then((data) => {
 
 // // Initialize the dashboard
 // init():
-  
