@@ -39,12 +39,12 @@ class Asylum_Seekers():
     #     self.TimeSeries=self.Base.classes['time_series']
     
     
-    def asy_seekers_info(self):
+    # def asy_seekers_info(self):
         
         # results = session.query(Asylumseekers.host_country, Asylumseekers.origin, Asylumseekers.year,Asylumseekers.month,Asylumseekers.value).\
         #     all() 
-        results = pd.read_csv("Resources/asylum_seekers_monthly.csv")
-        asy_seek = results.to_dict('results')
+        # results = pd.read_csv("Resources/asylum_seekers_monthly.csv")
+        # asy_seek = results.to_dict('results')
         # asy_seek = []
         # for result in results:
         #     temp_dict = {}
@@ -54,11 +54,11 @@ class Asylum_Seekers():
         #     temp_dict["Month"] = result[3]
         #     #temp_dict["Value"] = result[4]
         #     asy_seek.append(temp_dict)  
-        return(asy_seek)    
+        # return(asy_seek)    
 
     def demographics(self):
 
-        results = pd.read_csv("Resources/demographics.csv")
+        results = pd.read_csv("demographics.csv")
         dem = results.to_dict('results')
         # results = session.query(Demographics.year,Demographics.host_country, Demographics.location_name,
         # Demographics.female_0_4, Demographics.female_5_11, Demographics.female_5_17,
@@ -93,7 +93,7 @@ class Asylum_Seekers():
 
     def time_series_info(self): 
 
-        results = pd.read_csv("Resources/time_series.csv")
+        results = pd.read_csv("timeseries.csv")
         time = results.to_dict('results')
         # results = session.query(Timeseries.year, Timeseries.host_country, Timeseries.origin,Timeseries.population_type,Timeseries.value).\
         #     all() 

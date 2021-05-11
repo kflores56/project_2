@@ -4,10 +4,11 @@
 // -----------------------------------
 
 // Create function
+build_mfChart();
 
-function build_mfChart(sample) {
+function build_mfChart() {
   
-  var dataUrl = `https://asylumseekersapp.herokuapp.com/api/demographics`;
+  var dataUrl = "https://asylumseekersapp.herokuapp.com/api/demographics";
   // var dataUrl = "/Resources/demographics.csv"
 
   // var userInfo;
