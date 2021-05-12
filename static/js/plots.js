@@ -22,13 +22,14 @@ d3.json(dataUrl).then((data) => {
     var mf_year = data.map(info => info.year);
     var m_total = data.map(info => info.m_total);
     var f_total = data.map(info => info.f_total);
+    var country = data.map(info => info.host_country);
     // var gender = [m_total, f_total];
 
     // Build Bar Chart
     var barData = [
       {
-        y: mf_year,
         x: m_total,f_total,
+        y: country,
         //text: " ",
         type: "bar",
         orientation: "h",
@@ -36,83 +37,91 @@ d3.json(dataUrl).then((data) => {
     ];
 
     var barLayout = {
-      title: "Male vs Female",
+      title: "Total Assylum Seekers by Year",
       margin: { t: 30, l: 150 }
     };
 
     Plotly.newPlot("mf_bar", barData, barLayout);
+  });
+
+// // -----------------------------------
+// // Male vs Female Bubble Chart
+// // -----------------------------------
+
+// function buildCharts(sample) {
+  
+  var dataUrl = "http://127.0.0.1:5000/api/demographics";
+
+  d3.json(dataUrl).then((data) => {
+
+    // var resultArray = data.results;
+    // userInfo = data.user;
+
+    // var mf_year = data.map(info => info.year);
+    var m_total = data.map(info => info.m_total);
+    var f_total = data.map(info => info.f_total);
+    var country = data.map(info => info.host_country);
+
+    // Build a Bubble Chart
+    var bubbleLayout = {
+      title: "Male vs Female",
+      margin: { t: 0 },
+      hovermode: "closest",
+      xaxis: { title: "Country" },
+      yaxis: { title: "Number of People"},
+      margin: { t: 30}
+    };
+    var bubbleData = [
+      {
+        x: m_total, f_total,
+        y: country,
+        text: country,
+        mode: "markers",
+        marker: {
+          size: (m_total/1,000),
+          // color: m_total,
+          colorscale: "Earth"
+        }
+      }
+    ];
+
+    Plotly.newPlot("bubble", bubbleData, bubbleLayout);
   })
-
-//   var dataUrl = "/api/demographics";
-//   // var dataUrl = "/Resources/demographics.csv"
-
-//   // var userInfo;
-//   d3.json(dataUrl).then((data) => {
-//     console.log(data)
-//     var mf_year = data.map(info => info.year);
-//     var m_total = data.map(info => info.m_total);
-//     var f_total = data.map(info => info.f_total);
-//     // var gender = [m_total, f_total];
-
-//     // Build Bar Chart
-//     var barData = [
-//       {
-//         y: mf_year,
-//         x: m_total, f_total,
-//         text: "",
-//         type: "bar",
-//         orientation: "h",
-//       }
-//     ];
-
-//     var barLayout = {
-//       title: "Male vs Female",
-//       margin: { t: 30, l: 150 }
-//     };
-
-//     Plotly.newPlot("mf_bar", barData, barLayout);
-    
-//   }
-// )}
-// // -----------------------------------
-// // Age Breakdown Bar Chart
-// // -----------------------------------
-
-//     var 
 
 
 // // -----------------------------------
 // // Top 25 Chart Countries Bar Graph
 // // -----------------------------------
 
-// // Create Function 
+// Create Function 
 // function build_topChart(sample) {
 
-//   var dataUrl = "/api/timeseries";
+  var dataUrl = "http://127.0.0.1:5000//api/timeseries";
 
-//   d3.json(dataUrl).then((data) => {
+  d3.json(dataUrl).then((data) => {
 
-//     var top_year = data.map(info => info.year);
-//     var host = data.map(info => info.host);
-//     var value = data.map(info => info.value);
+    // var top_year = data.map(info => info.year);
+    var host = data.map(info => info.host_country);
+    var value = data.map(info => info.value);
 
-//     // Build Bar Chart
-//     var barData = [
-//       {
-//         y: top_year,
-//         x: value.slice(0, 25).reverse(),
-//         text: host.slice(0, 25).reverse(),
-//         type: "bar",
-//         // orientation: "h",
-//       }
-//     ];
+    // Build Bar Chart
+    var barData = [
+      {
+        y: value,
+        x: host.slice(0, 25),
+        text: host.slice(0, 25),
+        type: "bar",
+        // orientation: "h",
+      }
+    ];
 
-//     var barLayout = {
-//       title: "Top 25 Host Countries",
-//       margin: { t: 30, l: 150 }
-//     };
+    var barLayout = {
+      title: "Top 25 Host Countries for Past 5 Years",
+      margin: { t: 30, l: 150 }
+    };
 
-//     Plotly.newPlot("bar", barData, barLayout);
+    Plotly.newPlot("top_bar", barData, barLayout);
+  });
 
 
 // // Dropdown function 
