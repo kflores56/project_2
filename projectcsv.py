@@ -108,8 +108,9 @@ class Asylum_Seekers():
         #     time.append(temp_dict)
         return(time)   
 
-    def geomaps(self):
-        results = pd.read_csv("Resources/Coordinates_File2.csv")
+    def geomap(self):
+
+        results = pd.read_csv("Coordinates_File2.csv")
         geo = results.to_dict('results')
         return(geo)
    
