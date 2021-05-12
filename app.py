@@ -45,5 +45,10 @@ def demo():
 def time():
     return jsonify(data.time_series_info())
 
+@app.route("/api/geomaps")
+@cross_origin()
+def geo():
+    return jsonify(data.geomaps())
+
 if __name__ == '__main__':
     app.run(debug=True)
