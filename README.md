@@ -22,9 +22,9 @@ This agency gathers data that covers the movement of displaced persons.
 ## Create an interactive web application to help us visualize the movement of people seeking refuge and to answer the following:
 
 
-## 1. What are the top 25 countries hosting refugees?
-## 2. What are the total number of refugees by year?
-## 3. What does the concentration of refugees look like globally in 2016? 
+### 1. What are the top 25 countries hosting refugees?
+### 2. What are the total number of refugees by year?
+### 3. What does the concentration of refugees look like globally in 2016? 
 
 
 ---
