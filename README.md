@@ -67,7 +67,15 @@ File Name | Contents
 
 # Our Product:
 
-[**Click Here**](https://asylumseekersapp.herokuapp.com/)
+[**Launch Website**](https://asylumseekersapp.herokuapp.com/)
+
+### Webpage
+<a href="https://github.com/kflores56/project_2/tree/main/readme_images/webpage"><img width="100" align='left' src="readme_images/webpage.png?raw=true"></a> 
+<b/>
+
+### Map
+<a href="https://github.com/kflores56/project_2/tree/main/readme_images/map"><img width="100" align='left' src="readme_images/map.png?raw=true"></a> 
+<b/>
 
 ---
 
