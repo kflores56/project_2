@@ -51,7 +51,7 @@ File Name | Contents
 <b/>
 ---
 -  `Python` and `Flask` to create APIs
--  `Javascript, D3.js, Leaflet, Mapbox, CSS, Bootstrap, Vuetify.js` to create visualizations 
+-  `Javascript, D3.js, Leaflet, Mapbox, CSS, Bootstrap, googleapis.js` to create visualizations 
 ---
 <a href="https:github.com/nadiaaldrich/project_2/main/readme_images"><img width="100" align='left' src="readme_images/cloud.png?raw=true"></a> 
 <b/>
