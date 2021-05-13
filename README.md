@@ -70,11 +70,11 @@ File Name | Contents
 [**Launch Website**](https://asylumseekersapp.herokuapp.com/)
 
 ### Webpage
-<a href="https://github.com/kflores56/project_2/tree/main/readme_images/webpage"><img width="500" src="readme_images/webpage.png?raw=true"></a> 
+<a href="https://github.com/kflores56/project_2/tree/main/readme_images/webpage"><img width="750" src="readme_images/webpage.png?raw=true"></a> 
 <b/>
 
 ### Map
-<a href="https://github.com/kflores56/project_2/tree/main/readme_images/map"><img width="500" src="readme_images/map.png?raw=true"></a> 
+<a href="https://github.com/kflores56/project_2/tree/main/readme_images/map"><img width="750" src="readme_images/map.png?raw=true"></a> 
 <b/>
 
 ---
