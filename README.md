@@ -51,7 +51,7 @@ File Name | Contents
 <b/>
 ---
 -  `Python` and `Flask` to create APIs
--  `Javascript, D3.js, Leaflet, Mapbox, CSS, Bootstrap, googleapis.js` to create visualizations 
+-  `Javascript, D3.js, Leaflet, Mapbox, CSS, Bootstrap, Googleapis.js` to create visualizations 
 ---
 <a href="https:github.com/nadiaaldrich/project_2/main/readme_images"><img width="100" align='left' src="readme_images/cloud.png?raw=true"></a> 
 <b/>
@@ -83,7 +83,9 @@ File Name | Contents
 
 # Analysis 
 
-PENDING...
+- In 2016, the Democratic Republic of Congo took in the largest number if refugees, followed Yemen. 
+- The United States is never in the top host countries. 
+- Middle Eastern countries show consistent refugee movement.  
 
 ---
 
